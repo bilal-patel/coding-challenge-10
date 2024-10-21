@@ -37,3 +37,23 @@ let selectedSize = size.value; let product = stock[selectedSize]; // get the sel
     } else {
         button.disabled = true; // Disable button if not in stock
     }});
+
+    // Task 4
+
+// Add checkout event listener to the purchase button
+button.addEventListener("click", function() {
+    
+    let selectedSize = size.value; 
+    // Get the selected size
+
+    let product = stock[selectedSize]; // Get product details
+
+    // Check if the product is in stock
+    if (product.inStock) {
+
+        alert("Thank you for purchasing BP's TSHIRT in " + selectedSize + " size!!!"); // Confirmation
+
+    } else {
+
+        alert("Sorry, better luck next time ;) "); // Out of stock message
+    }});
